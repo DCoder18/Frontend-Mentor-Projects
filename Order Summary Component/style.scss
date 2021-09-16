@@ -1,0 +1,165 @@
+//Variables
+$pale_blue: hsl(225, 100%, 94%);
+$bright_blue: hsl(245, 75%, 52%);
+$very_pale_blue: hsl(225, 100%, 98%);
+$desaturated_blue: hsl(224, 23%, 55%);
+$dark_blue: hsl(223, 47%, 23%);
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  //Defines what 1rem is
+  font-size: 62.5%; //10px
+}
+
+body {
+    box-sizing: border-box;
+    background: no-repeat top/cover url('../images/pattern-background-desktop.svg');
+    background-color: $pale_blue;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    color: $desaturated_blue;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: 2.5rem;
+  box-shadow: 0px 20px 85px -37px rgba($bright_blue, 0.4);
+
+  &__image {
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -2px;
+  }
+
+  &__heading {
+    padding: 4rem 0 1.5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    color: $dark_blue;
+  }
+
+  &__para {
+    max-width: 40rem;
+    padding: 0 2rem 2rem;
+    line-height: 2.3rem;
+  }
+}
+
+.plan {
+  background-color: $very_pale_blue;
+  display: flex;
+  flex-direction: row;
+  width: 36rem;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  align-items: center ;
+  margin: 0 3rem 3rem;
+
+  &__icon {
+    margin-right: 2rem;
+
+  }
+  
+  &__price-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  &__heading {
+    color: $dark_blue;
+    font-weight: 900;
+    font-size: inherit;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &--text {
+    margin-left: auto;
+    justify-content: flex-end;
+    color: $bright_blue;
+    text-decoration: underline;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: 0.3s;
+
+    &:hover {
+      color: rgba($bright_blue, .7);
+      text-decoration: none;
+    }
+  }
+
+  &--primary {
+    background: $bright_blue;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    width: 36rem;
+    margin-bottom: 3.3rem;
+    box-shadow: 0px 20px 37px -15px rgba($bright_blue, 0.65);
+    transition: 0.3s;
+    font-weight: 700;
+
+    &:hover {
+      background-color: rgba($bright_blue, .7);
+    }
+  }
+
+  &--cancel {
+    font-weight: 700;
+    transition: 0.3s;
+    font-weight: 900;
+
+    &:hover {
+      color: $dark_blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .card {
+    max-width: 95%;
+  }
+
+  .plan {
+    max-width: 30rem;
+  }
+
+  .btn--primary {
+    max-width: 30rem;
+  }
+}
