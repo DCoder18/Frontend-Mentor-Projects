@@ -24,10 +24,10 @@ Users should be able to:
 
 ### Screenshot
 
-## Desktop
+#### Desktop
 ![](./screenshot.png)
 
-## Mobile
+#### Mobile
 ![](./screenshot-m.png)
 
 ### Links
