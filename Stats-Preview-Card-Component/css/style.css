@@ -1,0 +1,100 @@
+:root {
+  --color-darkBlue: hsl(233, 47%, 7%);
+  --color-desaturatedBlue: hsl(244, 38%, 16%);
+  --color-softViolet: hsl(277, 64%, 61%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-transparentWhite-1: hsla(0, 0%, 100%, 0.75);
+  --color-transparentWhite-2: hsla(0, 0%, 100%, 0.6);
+  --font-inter: 'Inter', sans-serif;
+  --font-lexend: 'Lexend Deca', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000;
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+.heading-primary {
+  font-size: clamp(2.5rem, 3vw, 6rem);
+  line-height: 1.3;
+  padding: 0 0 3rem;
+}
+
+.heading-primary--purple {
+  color: var(--color-softViolet);
+}
+
+.para {
+  color: var(--color-transparentWhite-1);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80vw;
+}
+
+.card {
+  background-color: var(--color-desaturatedBlue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 1rem;
+}
+
+.column-1 {
+  padding: 10rem;
+}
+
+.column-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 42%;
+          flex: 0 0 42%;
+}
+/*# sourceMappingURL=style.css.map */

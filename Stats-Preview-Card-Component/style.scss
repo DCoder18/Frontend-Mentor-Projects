@@ -15,3 +15,74 @@
     --font-inter: 'Inter', sans-serif;
     --font-lexend: 'Lexend Deca', sans-serif; 
 }
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  //Defines what 1rem is
+  font-size: 62.5%; //10px
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+//Typography
+.heading-primary {
+  // font-size: 4rem;
+  font-size : clamp(2.5rem, 3vw, 6rem);
+  line-height: 1.3;
+  padding: 0 0 3rem;
+
+  &--purple {
+    color: var(--color-softViolet);
+  }
+}
+
+.para {
+  color: var(--color-transparentWhite-1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+}
+
+.card {
+  background-color: var(--color-desaturatedBlue);
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+}
+
+.column-1 {
+  padding: 10rem;
+}
+
+.column-2 {
+  display: flex;
+  align-self: stretch;
+  justify-content: flex-end;
+  flex: 0 0 42%;
+}
