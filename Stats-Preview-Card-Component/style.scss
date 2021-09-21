@@ -118,7 +118,7 @@ img {
 }
 
 .heading-secondary {
-  font-size : clamp(2rem, 1.4vw, 3rem);
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 .para {
@@ -141,10 +141,15 @@ img {
 @media (max-width: 1600px) {
   .container {
     max-width: 90%;
+    overflow-x: hidden;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    overflow-x: hidden;
+  }
+
   .card {
     width: 100%;
     flex-direction: column-reverse;
@@ -187,6 +192,6 @@ img {
   }
 
   .content-section {
-    padding: 2rem;
+    padding: 3rem;
   }
 }
