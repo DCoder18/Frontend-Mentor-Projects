@@ -17,6 +17,7 @@
 
   //Border Radius
   --border-radius-img: 0 1rem 1rem 0;
+  --border-radius-img-m: 1rem 1rem 0 0;
 }
 
 *,
@@ -55,6 +56,8 @@ img {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 68vw;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card {
@@ -68,7 +71,7 @@ img {
   }
 
   &__stats:not(:last-child) {
-    margin-right: 5rem; 
+    margin: 0 5rem 0 0; 
   }
 }
 
@@ -135,10 +138,55 @@ img {
 }
 
 
-
 @media (max-width: 1600px) {
   .container {
     max-width: 90%;
+  }
+}
 
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .content-section {
+    padding: 5rem;
+  }
+
+  .image-section {
+    &__img {
+      border-radius: var(--border-radius-img-m);
+    }
+
+    &::after {
+      border-radius: var(--border-radius-img-m);
+    }
+  }
+
+  .para {
+    max-width: 100%;
+  }
+
+  .card__stats-container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    &__stats-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    &__stats:not(:last-child) {
+      margin: 0 0 2rem;
+    }
+  }
+
+  .content-section {
+    padding: 2rem;
   }
 }
