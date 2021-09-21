@@ -13,7 +13,10 @@
 
   //Fonts
     --font-inter: 'Inter', sans-serif;
-    --font-lexend: 'Lexend Deca', sans-serif; 
+    --font-lexend: 'Lexend Deca', sans-serif;
+
+  //Border Radius
+  --border-radius-img: 0 1rem 1rem 0;
 }
 
 *,
@@ -39,23 +42,7 @@ body {
 }
 
 img {
-  max-width: 100%;
-}
-
-//Typography
-.heading-primary {
-  // font-size: 4rem;
-  font-size : clamp(2.5rem, 3vw, 6rem);
-  line-height: 1.3;
-  padding: 0 0 3rem;
-
-  &--purple {
-    color: var(--color-softViolet);
-  }
-}
-
-.para {
-  color: var(--color-transparentWhite-1);
+  width: 100%;
 }
 
 .container {
@@ -66,23 +53,92 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;
+  width: 100%;
+  max-width: 68vw;
 }
 
 .card {
   background-color: var(--color-desaturatedBlue);
   display: flex;
-  flex-direction: row;
   border-radius: 1rem;
+
+  &__stats-container {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__stats:not(:last-child) {
+    margin-right: 5rem; 
+  }
 }
 
-.column-1 {
-  padding: 10rem;
+.content-section {
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 7rem 6.2rem;
+  justify-content: center;
 }
 
-.column-2 {
+.image-section {
   display: flex;
   align-self: stretch;
   justify-content: flex-end;
-  flex: 0 0 42%;
+  flex: 0 0 45%;
+  position: relative;
+
+  &__img {
+    border-radius: var(--border-radius-img);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-softViolet);
+    opacity: 0.5;
+    border-radius: var(--border-radius-img);
+  }
+}
+
+//Typography
+.heading-primary {
+  font-size : clamp(2.5rem, 3.5vw, 5rem);
+  line-height: 1.3;
+  padding: 0 0 2.3rem;
+
+  &--purple {
+    color: var(--color-softViolet);
+  }
+}
+
+.heading-secondary {
+  font-size : clamp(2rem, 1.4vw, 3rem);
+}
+
+.para {
+  color: var(--color-transparentWhite-1);
+  max-width: 90%;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+
+  &--uppercase {
+    color: var(--color-transparentWhite-2);
+    text-transform: uppercase;
+    font-family: var(--font-lexend);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 90%;
+
+  }
 }
