@@ -135,7 +135,7 @@ img {
 }
 
 .heading-secondary {
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(2rem, 2vw, 2.5rem);
   max-width: 75%;
 }
 
