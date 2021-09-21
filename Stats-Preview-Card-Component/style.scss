@@ -5,6 +5,7 @@
     --color-darkBlue: hsl(233, 47%, 7%);
     --color-desaturatedBlue: hsl(244, 38%, 16%);
     --color-softViolet: hsl(277, 64%, 61%);
+    --color-softViolet-darker: hsl(277, 84%, 61%);
 
     //Secondary
     --color-white: hsl(0, 0%, 100%);
@@ -100,7 +101,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-softViolet);
+    background: var(--color-softViolet-darker);
     opacity: 0.5;
     border-radius: var(--border-radius-img);
   }
