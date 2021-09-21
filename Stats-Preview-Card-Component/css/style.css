@@ -136,12 +136,11 @@ img {
 
 .heading-secondary {
   font-size: clamp(2rem, 2vw, 2.5rem);
-  max-width: 75%;
 }
 
 .para {
   color: var(--color-transparentWhite-1);
-  max-width: 90%;
+  max-width: 75%;
   line-height: 1.8;
   margin-bottom: 3rem;
 }
@@ -183,13 +182,13 @@ img {
   .image-section::after {
     border-radius: var(--border-radius-img-m);
   }
-  .para {
-    max-width: 100%;
-  }
   .card__stats-container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .heading-primary, .para {
+    max-width: 100%;
   }
 }
 
