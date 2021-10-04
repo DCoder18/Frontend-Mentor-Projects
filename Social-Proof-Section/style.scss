@@ -1,0 +1,39 @@
+:root {
+  //Colours
+  --color-darkMagenta: hsl(300, 43%, 22%);
+  --color-softPink: hsl(333, 80%, 67%);
+
+  --color-darkGreyMagenta: hsl(303, 10%, 53%);
+  --color-lightGreyMagenta: hsl(300, 24%, 96%);
+
+  //Font
+  --font-primary: 'Spartan', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  //Defines what 1rem is
+  font-size: 62.5%; //10px
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  background: url('/images/bg-pattern-top-desktop.svg'),
+              url('/images/bg-pattern-bottom-desktop.svg');
+  background-size: fit;
+  background-repeat: no-repeat;
+  background-position: left 0, bottom;
+}
+
+img {
+  width: 100%;
+}
