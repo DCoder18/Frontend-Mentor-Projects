@@ -24,13 +24,55 @@ body {
           box-sizing: border-box;
   font-family: var(--font-primary);
   font-weight: 400;
+  font-size: 1.5rem;
   background: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
   background-size: fit;
   background-repeat: no-repeat;
-  background-position: left 0, bottom;
+  background-position: left 28% top, right bottom;
+  height: 100vh;
 }
 
 img {
   width: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 120rem;
+  margin: auto;
+  padding: 16rem 0;
+}
+
+.heading-primary {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: var(--color-darkMagenta);
+  max-width: 46%;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.para {
+  color: var(--color-darkGreyMagenta);
+  max-width: 45%;
+  line-height: 1.5;
+}
+
+.two-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.star-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
