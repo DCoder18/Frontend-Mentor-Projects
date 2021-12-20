@@ -1,0 +1,62 @@
+/* ----------------- */
+/* Reset */
+/* ----------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing, Reset margins */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Responsive font size */
+
+html {
+  font-size: 62.5%;
+}
+
+
+/* Body reset */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+
+/* Image reset */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Form reset */
+input,
+button, 
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* Remove animations for those who turned it off */
+
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
