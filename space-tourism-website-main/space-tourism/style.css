@@ -15,13 +15,6 @@
 }
 
 
-/* Responsive font size */
-
-html {
-  font-size: 62.5%;
-}
-
-
 /* Body reset */
 
 body {
@@ -40,6 +33,7 @@ picture {
 
 
 /* Form reset */
+
 input,
 button, 
 textarea,
@@ -59,4 +53,41 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+
+/* ----------------- */
+/* Utility classes */
+/* ----------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em; /* New property. Sets only right & left padding */
+  margin-inline: auto; /* New property. Sets only right & left padding */
+  max-width: 80rem;
+}
+
+
+/* Screen reader only */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
