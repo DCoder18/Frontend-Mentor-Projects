@@ -133,7 +133,6 @@ select {
 
 .flow > * + * { /* OR flow > *:where(:not(:first-child)) */
   margin-top: var(--flow-space, 1rem);
-  border: 1px red solid;
 }
 
 
