@@ -109,14 +109,28 @@
                         <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
                     </div>
                     
-                    <div style="margin-bottom: 50vh">
+                    <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem;">
                         <!-- Tabs -->
-                        
+                        <div class="flex underline-indicators tab-list">
+                          <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
+                          <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
+                          <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
+                        </div>
                         
                         <!-- Dots -->
+                        <div class="flex dot-indicators">
+                          <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+                          <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                          <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                        </div>
                         
                         
                         <!-- Numbers -->
+                        <div class="number-indicators flex">
+                          <button class="text-white bg-dark ff-serif" aria-selected="true">1</button>
+                          <button class="text-white bg-dark ff-serif" aria-selected="false">2</button>
+                          <button class="text-white bg-dark ff-serif" aria-selected="false">3</button>
+                        </div>
                     </div>
                 </div>
                 
