@@ -1,0 +1,117 @@
+:root {
+
+    /*---- Colors -----*/
+    --clr-blue: hsl(177°, 68%, 64%);
+    --clr-orange: hsl(12°, 94%, 65%);
+    --clr-yellow: hsl(33°, 100%, 70%);
+    --clr-white: hsl(20°, 33%, 98%);
+    --clr-black: hsl(244°, 23%, 12%);
+
+
+    /*---- Fonts -----*/
+    --ff-sans: 'IBM Plex Sans', sans-serif;
+
+    /*---- Font Sizes -----*/
+    --fs-700: 8.8rem;
+    --fs-600: 6.5rem;
+    --fs-500: 4rem;
+    --fs-400: 2rem;
+    --fs-300: 1.8rem;
+    --fs-200: 1.6rem;
+
+}
+
+
+/*--------------
+CSS Reset 
+--------------*/
+
+/* Box sizing, Reset margins */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Responsive font size */
+
+html {
+  font-size: 62.5%;
+}
+
+
+/* Body reset */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: var(--ff-sans);
+  font-weight: 400;
+}
+
+
+/* Image reset */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+.container {
+    max-width: 120rem;
+}
+
+/*--------------
+Utility Classes
+--------------*/
+
+/*---- Colors -----*/
+.bg-blue {
+    background-color: var(--clr-blue);
+}
+
+.bg-orange {
+    background-color: var(--clr-orange);
+}
+
+.bg-light {
+    background-color: var(--clr-white);
+}
+
+.bg-dark {
+    background-color: var(--clr-black);
+}
+
+.text-dark {
+    color: var(--clr-black);
+}
+
+.text-light {
+    color: var(--clr-white);
+}
+
+
+/*--------------
+Components 
+--------------*/
+.heading-primary {
+    font-weight: 700;
+    font-size: var(--fs-700);
+    line-height: 8.8rem;
+    letter-spacing: -1px;
+}
+
+.heading-secondary {
+    font-weight: 700;
+    font-size: var(--fs-600);
+    line-height: 5.2rem;
+}
+
+.button {
+
+}
