@@ -8,8 +8,8 @@
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
 
-   /* font-sizes */
-   --fs-900: 5rem;
+  /* font-sizes */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
   --fs-600: 1rem;
@@ -18,10 +18,10 @@
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
-   /* font-families */
-   --ff-serif: "Bellefair", serif;
-   --ff-sans-cond: "Barlow Condensed", sans-serif;
-   --ff-sans-normal: "Barlow", sans-serif;
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
 }
 
 
@@ -36,14 +36,11 @@
 
 @media (min-width: 45em) {
   :root {
-      --fs-900: 9.375rem;
+      /* font-sizes */
       --fs-800: 6.25rem;
       --fs-700: 3.5rem;
       --fs-600: 2rem;
-      --fs-500: 1.75rem;
       --fs-400: 1.125rem;
-      --fs-300: 1rem;
-      --fs-200: 0.875rem;
   }
 }
 
@@ -87,7 +84,6 @@ body {
 
   display: grid;
   grid-template-rows: min-content;
-  border: 8px solid blue;
 }
 
 
@@ -140,6 +136,10 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.d-block {
+  display: block;
+}
+
 .container {
   padding-inline: 2em; /* New property. Sets only right & left padding */
   margin-inline: auto; /* New property. Sets only right & left margin */
@@ -149,12 +149,20 @@ select {
 .grid-container {
   border: 5px solid limegreen;
   display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 50ch;
 }
 
 @media (min-width: 45rem) {
   .grid-container {
     column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    text-align: left;
   }
 
   .grid-container > *:first-child {
@@ -243,6 +251,7 @@ select {
 /* ------------------- */
 
 .large-button {
+  font-size: 2rem;
   position: relative;
   z-index: 1;
   display: inline-grid;
