@@ -36,6 +36,13 @@ CSS Reset
   box-sizing: border-box;
 }
 
+h1,
+h2,
+p {
+    font-weight: 400;
+}
+
+
 
 /* Responsive font size */
 
@@ -47,10 +54,9 @@ html {
 /* Body reset */
 
 body {
+  font-family: var(--ff-sans);
   line-height: 1.5;
   min-height: 100vh;
-  font-family: var(--ff-sans);
-  font-weight: 400;
 }
 
 
@@ -62,38 +68,56 @@ img {
 }
 
 
-.container {
-    max-width: 120rem;
-}
-
 /*--------------
 Utility Classes
 --------------*/
 
+/*---- General -----*/
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 128rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.grid-container {
+  outline: 5px solid limegreen;
+  display: grid;
+  column-gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2rem, 1fr) minmax(0, 96.8rem) auto minmax(2rem, 1fr);
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+  outline: 2px solid red;
+}
+
+.grid-container > img {
+  grid-column: 3;
+  outline: 2px solid yellow;
+}
+
+.grid-container > *:last-child {
+  grid-column: 4/1fr;
+}
+
 /*---- Colors -----*/
-.bg-blue {
-    background-color: var(--clr-blue);
-}
+.bg-blue { background-color: var(--clr-blue); }
+.bg-orange { background-color: var(--clr-orange); }
+.bg-light { background-color: var(--clr-white); }
+.bg-dark { background-color: var(--clr-black); }
 
-.bg-orange {
-    background-color: var(--clr-orange);
-}
-
-.bg-light {
-    background-color: var(--clr-white);
-}
-
-.bg-dark {
-    background-color: var(--clr-black);
-}
-
-.text-dark {
-    color: var(--clr-black);
-}
-
-.text-light {
-    color: var(--clr-white);
-}
+.text-dark { color: var(--clr-black); }
+.text-light { color: var(--clr-white); }
 
 
 /*--------------
