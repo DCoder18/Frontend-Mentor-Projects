@@ -1,11 +1,11 @@
 :root {
 
     /*---- colors -----*/
-    --clr-blue: hsl(177°, 68%, 64%);
-    --clr-orange: hsl(12°, 94%, 65%);
-    --clr-yellow: hsl(33°, 100%, 70%);
-    --clr-white: hsl(20°, 33%, 98%);
-    --clr-black: hsl(244°, 23%, 12%);
+    --clr-blue: hsl(177, 68%, 64%);
+    --clr-orange: hsl(12, 94%, 65%);
+    --clr-yellow: hsl(33, 100%, 70%);
+    --clr-white: hsl(20, 33%, 98%);
+    --clr-black: hsl(244, 23%, 12%);
 
     /* font-sizes */
     --fs-700: clamp(4rem, 7.2vw, 8.8rem);
@@ -93,27 +93,6 @@ Utility Classes
   margin: 0 auto;
 }
 
-/* .grid-container {
-  outline: 5px solid limegreen;
-  display: grid;
-  column-gap: var(--container-gap, 2rem);
-  grid-template-columns: minmax(2rem, 1fr) minmax(0, 96.8rem) auto minmax(2rem, 1fr);
-}
-
-.grid-container > *:first-child {
-  grid-column: 2;
-  outline: 2px solid red;
-}
-
-.grid-container > img {
-  grid-column: 3;
-  outline: 2px solid yellow;
-}
-
-.grid-container > *:last-child {
-  grid-column: 4/1fr;
-} */
-
 /*---- Colors -----*/
 .bg-blue { background-color: var(--clr-blue); }
 .bg-orange { background-color: var(--clr-orange); }
@@ -145,6 +124,7 @@ Typography
 
 .hero-section p {
   max-width: 77ch;
+  margin-bottom: 3rem;
 }
 
 
@@ -174,6 +154,21 @@ Components
   .bg-pattern-1 {
     display: none;
   }
+}
+
+.content-box {
+  width: 100%;
+  /* height: 40vh; */
+  border-radius: 12px;
+  padding: clamp(6.4rem, 7vw, 10rem)
+}
+
+.content-box__image {
+  width: 31.2rem;
+}
+
+.bg-pattern-2 {
+  height: 100%;
 }
 
 
