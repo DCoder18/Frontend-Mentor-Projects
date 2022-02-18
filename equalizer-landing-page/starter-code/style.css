@@ -67,6 +67,22 @@ body {
   line-height: 1.5;
   position: relative;
   overflow-x: hidden;
+  background-image: url("assets/bg-main-desktop.png");
+  background-position: bottom;
+}
+
+@media (max-width: 45em) { /* Tab */
+  body {
+    background-image: url("assets/bg-main-tablet.png");
+    background-position: bottom;
+  }
+}
+
+@media (max-width: 35em) { /* Mobile */
+  body {
+    background-image: url("assets/bg-main-mobile.png");
+    background-position: bottom 45rem right 35rem;
+  }
 }
 
 /* Image reset */
