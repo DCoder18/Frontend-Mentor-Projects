@@ -271,7 +271,8 @@ Components
   border-radius: var(--br-12);
   font-size: var(--fs-400);
   font-weight: 700;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
 }
 
 .premium-section .btn-apple:hover {
@@ -289,4 +290,63 @@ img[class^="icon"] { /* Class begins with "icon" */
   margin-right: 8px;
 }
 
+footer {
+  margin-top: 25rem;
+  font-size: 1.6rem;
+}
+
+.footer-content {
+  grid-template-columns: 1fr 40rem 1fr;
+}
+
+@media (max-width: 58em) { /* Tab */
+  .footer-content {
+    grid-template-columns: 40rem 1fr;
+  }
+
+  .copyright {
+    grid-column-start: 1;
+  }
+}
+
+.copyright {
+  flex-direction: column;
+  max-width: 40rem;
+}
+
+.copyright span{
+  font-weight: 700;
+}
+
+.social-icons {
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.social-icons img{
+  width: 2rem;
+  height: 2rem;
+  transition: all ease-in-out 200ms;
+}
+
+.social-icons img:hover{
+  cursor: pointer;
+  filter: invert(48%) sepia(97%) saturate(519%) hue-rotate(324deg) brightness(104%) contrast(96%);
+}
+
+@media (max-width: 40em) { /* Mobile */
+  footer {
+    padding-top: 2rem;
+    margin-top: 40rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+}
 
