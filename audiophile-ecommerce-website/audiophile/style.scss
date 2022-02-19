@@ -1,0 +1,173 @@
+// colors
+$clr-orange-1: #d97e4a;
+$clr-orange-2: #fbad83;
+$clr-dark-1: #0f0f0f;
+$clr-dark-2: #000000;
+$clr-grey-1: #f2f2f2;
+$clr-grey-2: #fafafa;
+$clr-white: #ffffff;
+
+// font sizes
+$fs-900: 5.6rem;
+$fs-800: 4rem;
+$fs-700: 3.2rem;
+$fs-600: 2.8rem;
+$fs-500: 2.4rem;
+$fs-400: 1.8rem;
+$fs-300: 1.5rem;
+$fs-200: 1.4rem;
+$fs-100: 1.3rem;
+
+/* --------------
+CSS Reset
+-------------- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: $fs-300;
+  background-color: $clr-grey-2;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+/* --------------
+Utility Classes
+-------------- */
+
+//general
+.container { padding: 2rem; }
+.grid { display: grid; }
+.flex { display: flex; }
+
+.flow * + *{
+  margin-top: var(--flow-space, 2rem);
+}
+
+//colors
+.clr-dark { color: $clr-dark-2; }
+.clr-light { color: $clr-white; }
+.clr-orange { color: $clr-orange-1; }
+.bg-grey { color: $clr-grey-1; }
+
+
+
+/* --------------
+Components
+-------------- */
+
+//headings
+.heading {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  &--1 {
+    font-size: $fs-900;
+    letter-spacing: 2px;
+  }
+
+  &--2 {
+    font-size: $fs-800;
+    letter-spacing: 2px;
+  }
+
+  &--3 {
+    font-size: $fs-700;
+  }
+  
+  &--4 {
+    font-size: $fs-600;
+    letter-spacing: 2px;
+  }
+  
+  &--5 {
+    font-size: $fs-500;
+    letter-spacing: 1.7px;
+  }
+  
+  &--6 {
+    font-size: $fs-400;
+    letter-spacing: 1.3px;
+  }
+  
+  &--7 {
+    font-size: $fs-300;
+    letter-spacing: 10px;
+    color: $clr-orange-1;
+  }
+  
+  &--8 {
+    font-size: $fs-200;
+    letter-spacing: 1px;
+    color: $clr-orange-2;
+  }
+}
+
+//buttons
+.btn {
+  padding: 1.5rem 3rem;
+  outline: none;
+  font-size: $fs-100;
+  text-transform: uppercase;
+  color: $clr-white;
+  transition: all ease-in-out 400ms;
+  border:none;
+  display: block;
+  max-width: 16rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+
+  &--primary {
+    background-color: $clr-orange-1;
+
+    &:hover {
+      background-color: $clr-orange-2;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid $clr-dark-2;
+    color: $clr-dark-2;
+
+    &:hover {
+      background-color: $clr-dark-2;
+      color: $clr-white;
+    }
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: $clr-dark-2;
+    max-width: max-content;
+    padding: 2rem 0;
+    display: inline-flex;
+
+    & span {
+      margin-top: 2px;
+      margin-left: 1.2rem;
+    }
+
+    &:hover {
+      color: $clr-orange-1;
+    }
+  }
+} 
