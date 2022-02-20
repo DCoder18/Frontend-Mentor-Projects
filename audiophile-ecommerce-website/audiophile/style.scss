@@ -53,12 +53,15 @@ Utility Classes
 -------------- */
 
 //general
-.container { padding: 2rem; }
 .grid { display: grid; }
 .flex { display: flex; }
 
-.flow * + *{
-  margin-top: var(--flow-space, 2rem);
+.flow * + * { margin-top: var(--flow-space, 2rem); }
+
+.container { 
+  padding: 2rem; 
+  max-width: 128rem;
+  margin: 0 auto;
 }
 
 //colors
