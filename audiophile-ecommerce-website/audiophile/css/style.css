@@ -36,12 +36,14 @@ Utility Classes
 .grid {
   display: -ms-grid;
   display: grid;
+  gap: var(--gap, 1rem);
 }
 
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: var(--gap, 1rem);
 }
 
 .flow * + * {
@@ -58,8 +60,12 @@ Utility Classes
   color: #000000;
 }
 
-.bg-dark {
+.bg-dark-1 {
   background-color: #000000;
+}
+
+.bg-dark-2 {
+  background-color: #191919;
 }
 
 .text-light {
@@ -88,6 +94,7 @@ Components
 .heading {
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  line-height: var(--line-height, 1.1);
 }
 
 .heading--1 {
@@ -120,15 +127,13 @@ Components
 }
 
 .heading--7 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 10px;
-  color: #d97e4a;
 }
 
 .heading--8 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
-  color: #fbad83;
 }
 
 .btn {
@@ -201,7 +206,7 @@ Components
 }
 
 .navbar-container ul {
-  gap: 3rem;
+  --gap: 3rem;
 }
 
 .navbar-container ul li {
@@ -219,5 +224,39 @@ Components
   height: 1px;
   background-color: #ffffff;
   opacity: 20%;
+}
+
+.hero-section {
+  padding: 2rem;
+  --flow-space: 2.4rem;
+  background-image: url("../assets/home/desktop/image-hero.jpg");
+  background-position: left bottom .8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero-section .heading--7 {
+  opacity: 50%;
+}
+
+.hero-section .heading--1 {
+  max-width: 20ch;
+}
+
+.hero-section p {
+  opacity: 75%;
+  max-width: 40ch;
+}
+
+.hero-section .btn--primary {
+  --flow-space: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
