@@ -1,3 +1,18 @@
+// screen sizes
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
 // colors
 $clr-orange-1: #d97e4a;
 $clr-orange-2: #fbad83;
@@ -9,24 +24,20 @@ $clr-grey-2: #fafafa;
 $clr-white: #ffffff;
 
 // font sizes
-$fs-900: 5.6rem;
-$fs-800: 4rem;
+$fs-900: 3.6rem;
+$fs-800: 2.8rem;
 $fs-700: 3.2rem;
 $fs-600: 2.8rem;
 $fs-500: 2.4rem;
-$fs-400: 1.8rem;
+$fs-400: 1.5rem;
 $fs-300: 1.5rem;
 $fs-200: 1.4rem;
 $fs-100: 1.3rem;
 
-@media (max-width: 45em) {
-  $fs-400: 1.5rem;
-}
-
-@media (max-width: 35em) {
-  $fs-900: 3.6rem;
-  $fs-800: 2.8rem;
-  
+@media (min-width: 35em) {
+  $fs-900: 5.6rem;
+  $fs-800: 4rem;
+  $fs-400: 1.8rem;
 }
 
 /* --------------
