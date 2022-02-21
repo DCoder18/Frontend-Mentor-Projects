@@ -26,6 +26,10 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --------------
 Utility Classes
 -------------- */
@@ -45,21 +49,33 @@ Utility Classes
 }
 
 .container {
-  padding: 2rem;
+  padding: 0 2rem;
   max-width: 128rem;
   margin: 0 auto;
 }
 
-.clr-dark {
+.text-dark {
   color: #000000;
 }
 
-.clr-light {
+.bg-dark {
+  background-color: #000000;
+}
+
+.text-light {
   color: #ffffff;
 }
 
-.clr-orange {
+.bg-light {
+  background-color: #ffffff;
+}
+
+.text-orange {
   color: #d97e4a;
+}
+
+.bg-orange {
+  background-color: #d97e4a;
 }
 
 .bg-grey {
@@ -169,5 +185,39 @@ Components
 
 .btn--tertiary:hover {
   color: #d97e4a;
+}
+
+.navbar-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem 0;
+}
+
+.navbar-container img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar-container ul {
+  gap: 3rem;
+}
+
+.navbar-container ul li {
+  list-style-type: none;
+}
+
+.navbar-container ul a {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ffffff;
+  opacity: 20%;
 }
 /*# sourceMappingURL=style.css.map */
