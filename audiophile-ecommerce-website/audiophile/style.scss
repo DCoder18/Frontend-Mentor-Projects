@@ -24,20 +24,21 @@ $clr-grey-2: #fafafa;
 $clr-white: #ffffff;
 
 // font sizes
-$fs-900: 3.6rem;
-$fs-800: 2.8rem;
-$fs-700: 3.2rem;
-$fs-600: 2.8rem;
-$fs-500: 2.4rem;
-$fs-400: 1.5rem;
-$fs-300: 1.5rem;
-$fs-200: 1.4rem;
-$fs-100: 1.3rem;
+:root {
+  --fs-900: 3.6rem;
+  --fs-800: 2.8rem;
+  --fs-700: 3.2rem;
+  --fs-600: 2.8rem;
+  --fs-500: 2.4rem;
+  --fs-400: 1.8rem;
+  --fs-300: 1.5rem;
+  --fs-200: 1.4rem;
+  --fs-100: 1.3rem;
 
-@media (min-width: 35em) {
-  $fs-900: 5.6rem;
-  $fs-800: 4rem;
-  $fs-400: 1.8rem;
+  @media (min-width: 35em) {
+    --fs-900: 5.6rem;
+    --fs-800: 4rem;
+  }
 }
 
 /* --------------
@@ -58,7 +59,7 @@ html {
 
 body {
   font-family: 'Manrope', sans-serif;
-  font-size: $fs-300;
+  font-size: var(--fs-300);
   background-color: $clr-grey-2;
   line-height: 1.5;
 }
@@ -90,6 +91,10 @@ Utility Classes
   display: flex;
   gap: var(--gap, 1rem);
 }
+
+.justify-content-center { justify-content: center; }
+
+.align-items-center { align-items:center; }
 
 .flow * + * { margin-top: var(--flow-space, 2rem); }
 
@@ -125,50 +130,50 @@ Components
   line-height: var(--line-height, 1.1);
 
   &--1 {
-    font-size: $fs-900;
+    font-size: var(--fs-900);
     letter-spacing: 2px;
   }
 
   &--2 {
-    font-size: $fs-800;
+    font-size: var(--fs-800);
     letter-spacing: 2px;
   }
 
   &--3 {
-    font-size: $fs-700;
+    font-size: var(--fs-700);
   }
   
   &--4 {
-    font-size: $fs-600;
+    font-size: var(--fs-600);
     letter-spacing: 2px;
   }
   
   &--5 {
-    font-size: $fs-500;
+    font-size: var(--fs-500);
     letter-spacing: 1.7px;
   }
   
   &--6 {
-    font-size: $fs-400;
+    font-size: var(--fs-400);
     letter-spacing: 1.3px;
   }
   
   &--7 {
-    font-size: $fs-200;
+    font-size: var(--fs-200);
     letter-spacing: 10px;
   }
   
   &--8 {
-    font-size: $fs-100;
+    font-size: var(--fs-100);
     letter-spacing: 1px;
   }
 }
 
 //buttons
 .btn {
-  padding: 1.5rem 3rem;
+  padding-block: 1.5rem;
   outline: none;
-  font-size: $fs-100;
+  font-size: --fs-100;
   text-transform: uppercase;
   color: $clr-white;
   transition: all ease-in-out 400ms;
@@ -178,6 +183,7 @@ Components
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+  position: relative;
 
   &--primary {
     background-color: $clr-orange-1;
@@ -202,17 +208,25 @@ Components
     background-color: transparent;
     color: $clr-dark-2;
     max-width: max-content;
-    padding: 2rem 0;
+    padding: 1.3rem 0;
     display: inline-flex;
 
-    & span {
-      margin-top: 2px;
+    & .shop-text {
+      opacity: 50%;
+      transition: all ease-in-out 400ms;
+
+      &:hover {
+        color: $clr-orange-1;
+        opacity: 100%;
+      }
+    }
+
+    & span img {
+      margin-top: 3.5px;
       margin-left: 1.2rem;
     }
 
-    &:hover {
-      color: $clr-orange-1;
-    }
+    
   }
 }
 
@@ -223,6 +237,7 @@ Components
 
   img {
     align-self: center;
+    cursor: pointer;
   }
 
   ul {
@@ -230,13 +245,18 @@ Components
 
     li {
       list-style-type: none;
-    }
 
-    a {
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: $fs-100;
-      color: $clr-white;
+      a {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: --fs-100;
+        color: $clr-white;
+        transition: all ease-in-out 300ms;
+
+        &:hover {
+          color: $clr-orange-1;
+        }
+      }
     }
   }
 }
@@ -247,7 +267,7 @@ Components
 }
 
 //hero section
-.hero-section {
+.hero {
   padding: 2rem;
   --flow-space: 2.4rem;
   background-image: url("../assets/home/desktop/image-hero.jpg");
@@ -257,6 +277,8 @@ Components
   height: 60vh;
   justify-content: center;
   flex-direction: column;
+
+  
 
   .heading--7 {
     opacity: 50%;
@@ -273,5 +295,39 @@ Components
 
   .btn--primary {
     --flow-space: 4rem;
+  }
+}
+
+//shop category section
+.shop-category {
+  grid-template-columns: repeat(3, 1fr);
+  margin-block: 20rem;
+
+  &__item {
+    max-width: 35rem;
+    max-height: max-content;
+    background-color: $clr-grey-1;
+    position: relative;
+    height: 20.4rem;
+    text-align: center;
+    padding-top: 13rem;
+    border-radius: 8px;
+  }
+
+  &__image {
+    position: absolute;
+    max-width: 75%;
+
+    &--1 {
+      top: -9.5rem;
+    }
+
+    &--2 {
+      top: -8.5rem;
+    }
+
+    &--3 {
+      top: -7rem;
+    }
   }
 }
