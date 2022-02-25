@@ -1,15 +1,32 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 .navbar-container {
   justify-content: space-between;
   padding: 3rem 0;
+
+  .nav-toggle-mobile {
+    display: block;
+    background: transparent;
+    border: 0;
+    aspect-ratio: 1;
+    width: 1.6rem;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/shared/tablet/icon-hamburger.svg');
+
+    @include for-size(big-desktop-up) {
+      display: none;
+    }
+  }
 
   img {
     align-self: center;
     cursor: pointer;
   }
 
-  ul {
+  .navbar {
     --gap: 3rem;
 
     li {
@@ -26,6 +43,10 @@
           color: $clr-orange-1;
         }
       }
+    }
+
+    @include for-size(tablet-down) {
+      flex-direction: column;
     }
   }
 }
