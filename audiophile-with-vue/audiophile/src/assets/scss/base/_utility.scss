@@ -1,0 +1,42 @@
+//general
+.grid { 
+  display: grid;
+  gap: var(--gap, 1rem);
+ }
+
+.flex { 
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.justify-content-center { 
+  justify-content: center;
+}
+
+.align-items-center { 
+  align-items:center;
+}
+
+.flow * + * { 
+  margin-top: var(--flow-space, 2rem); 
+}
+
+.container { 
+  padding: 0 2rem; 
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+
+//colors
+.text-dark { color: $clr-dark-2; }
+.bg-dark-1 { background-color: $clr-dark-2; }
+.bg-dark-2 { background-color: $clr-dark-3; }
+
+.text-light { color: $clr-white; }
+.bg-light { background-color: $clr-white; }
+
+.text-orange { color: $clr-orange-1; }
+.bg-orange { background-color: $clr-orange-1; }
+
+.bg-grey { color: $clr-grey-1; }

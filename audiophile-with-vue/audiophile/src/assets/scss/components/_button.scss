@@ -1,0 +1,57 @@
+.btn {
+  padding-block: 1.5rem;
+  outline: none;
+  font-size: --fs-100;
+  text-transform: uppercase;
+  color: $clr-white;
+  transition: all ease-in-out 400ms;
+  border:none;
+  display: block;
+  max-width: 16rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+
+  &--primary {
+    background-color: $clr-orange-1;
+
+    &:hover {
+      background-color: $clr-orange-2;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid $clr-dark-2;
+    color: $clr-dark-2;
+
+    &:hover {
+      background-color: $clr-dark-2;
+      color: $clr-white;
+    }
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: $clr-dark-2;
+    max-width: max-content;
+    padding: 1.3rem 0;
+    display: inline-flex;
+
+    & .shop-text {
+      opacity: 50%;
+      transition: all ease-in-out 400ms;
+
+      &:hover {
+        color: $clr-orange-1;
+        opacity: 100%;
+      }
+    }
+
+    & span img {
+      margin-top: 3.5px;
+      margin-left: 1.2rem;
+    }
+  }
+}
