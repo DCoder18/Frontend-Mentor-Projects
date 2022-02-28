@@ -1,11 +1,11 @@
 <template>
   <nav>
     <div class="flex navbar-container">
-      <div class="flex">
-        <button @click="expandNav()" class="nav-toggle-mobile" data-visible="false"></button>
+      <div class="flex nav-toggle-container">
+        <button @click="isExpanded = !isExpanded" class="nav-toggle-mobile"></button>
         <img src="@/assets/images/shared/desktop/logo.svg" alt="audiophile logo">
       </div>
-      <ul class="flex navbar" data-visible="false">
+      <ul :class="['flex', 'navbar', isExpanded ? 'show-nav' : 'hide-nav']">
         <li><a href="#">Home</a></li>
         <li><a href="#">Headphones</a></li>
         <li><a href="#">Speakers</a></li>
@@ -18,11 +18,13 @@
 </template>
 
 <script>
+// import $ from 'jquery';
+
 export default {
   name: 'Navbar',
-  methods: {
-    expandNav() {
-      console.log('click');
+  data: function() {
+    return {
+      isExpanded: false,
     }
   }
 }

@@ -2,7 +2,7 @@
   <div id="app">
      <header class="text-light">
       <div class="bg-dark-2">
-        <div class="container">
+        <!-- <div class="container"> -->
 
           <Navbar />
 
@@ -15,7 +15,7 @@
             </div>
           </section> -->
 
-        </div>
+        <!-- </div> -->
       </div>
     </header>
   </div>
@@ -29,6 +29,7 @@ export default {
   components: {
     Navbar
   }
+
 }
 </script>
 
