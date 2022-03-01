@@ -43,19 +43,9 @@ export default {
   justify-content: space-between;
   padding: 3rem 2rem;
   position: relative;
-  z-index: 5;
 
   .nav-toggle-container {
     --gap: 1.8rem;
-    justify-content: space-between;
-
-    // button {
-    //   display: inline-block;
-    // }
-
-    // img {
-    //   display: inline-block;
-    // }
   }
 
   .nav-toggle-mobile {
@@ -89,7 +79,6 @@ export default {
   left: 0;
   width: 100%;
   background-color: $clr-dark-3;
-  z-index: 0;
   transition: all 500ms ease-in-out;
 
   &.hide-nav {
