@@ -60,6 +60,18 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 45em) {
+  .container {
+    max-width: 128rem;
+  }
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   font-size: var(--fs-300);
@@ -137,12 +149,6 @@ body {
 
 .flow * + * {
   margin-top: var(--flow-space, 2rem);
-}
-
-.container {
-  padding: 0 2rem;
-  max-width: 128rem;
-  margin: 0 auto;
 }
 
 .text-dark {
