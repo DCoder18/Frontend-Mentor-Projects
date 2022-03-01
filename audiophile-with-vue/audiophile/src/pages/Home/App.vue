@@ -5,15 +5,7 @@
         <div class="container">
 
           <Navbar />
-
-          <!-- <section class="hero flow flex">
-            <div>
-              <p class="heading heading--7">New product</p>
-              <h2 class="heading heading--1">XX99 Mark II Headphones</h2>
-              <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-              <a class="btn btn--primary" href="#">See product</a>
-            </div>
-          </section> -->
+          <!-- <Hero /> -->
 
         </div>
       </div>
@@ -23,11 +15,13 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+import Hero from '@/components/Hero-Section.vue'
 
 export default {
   name: 'Home',
   components: {
-    Navbar
+    Navbar,
+    Hero,
   }
 
 }
