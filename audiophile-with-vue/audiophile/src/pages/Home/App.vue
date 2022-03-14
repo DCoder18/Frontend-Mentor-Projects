@@ -5,7 +5,7 @@
         <div class="container">
 
           <Navbar />
-          <!-- <Hero /> -->
+          <Hero />
 
         </div>
       </div>
